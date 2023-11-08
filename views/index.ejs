@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pets-R-Us</title>
+
+    <link href="/styles/site.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--
+        Title: index.ejs
+        Author: Jeremy Lates
+        Date: 11/07/2023
+        Description:
+
+        Programming cites
+        1. Code adapted from W3Schools https://www.w3schools.com/howto/howto_css_two_columns.asp
+        2. Code adapted from W3Schools https://www.w3schools.com/howto/howto_css_contact_form.asp
+
+      
+
+
+    -->
+  <body>
+    <header class="header">
+      <h1>Pets-R-Us</h1>
+    </header>
+
+    <section class="navbar">
+      <a href="/grooming">Grooming</a>
+    </section>
+    <section class="container">
+      <h2>Welcome to Pets-R-Us!!</h2>
+
+      <p>
+        Pets-R-Us is a local store that offers a variety of pets for adoption.
+        Pets-R-Us also sells a variety of pet-related products, supplies,
+        services, and accessories. Recently Pets-R-Us expanded into dog
+        grooming, training, and boarding services.
+      </p>
+      <div>
+        <div class="columnA">
+          <h3 class="columnHeader">Locations</h3>
+          <ul>
+            <li>Auburn, NH</li>
+            <li>Hookset, NH</li>
+            <li>Manchester, NH</li>
+            <li>Nashua, NH</li>
+            <li>Portsmouth, NH</li>
+          </ul>
+        </div>
+        <div class="columnA">
+          <h3 class="columnHeader">Location Hours</h3>
+          <h4>7:00am est. - 10:00pm est.</h4>
+        </div>
+      </div>
+      <div>
+        <div class="columnB">
+          <h3 class="columnHeader">Dog of week</h3>
+
+          <img
+            id="imgDogOfWeek"
+            src="/images/Marley.jpeg"
+            alt="Marley is a weimaraner dog"
+          />
+          <p>
+            Marley is our dog of the week. Marley is 11 years old and has had a
+            tumor removed this week. They are not sure if it is cancer or not.
+            Marley has been a trooper through it all. He continues to eat all
+            his food and tries to stay playful as possible. Marley get well
+            soon. Our pet of the week.
+          </p>
+        </div>
+        <div class="columnB">
+          <h3 class="columnHeader">Testimonials</h3>
+          <ol>
+            <li>
+              This place is the best. I look forward to using your services
+              online
+            </li>
+            <li>This place is the best. My dog is so clean now</li>
+
+            <li>
+              Our family is whole now. We have our four legged family member
+              now.
+            </li>
+            <li>
+              Our dog loves going to daycare. He is always tired from a good day
+              of playing.
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="contact-us">
+        <h2>Contact us</h2>
+
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="Your first name..."
+        />
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Your last name..."
+        />
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="email address..."
+        />
+        <br />
+        <!-- <label for="subject">Subject</label> -->
+        <br />
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write why you like to contact us..."
+        ></textarea>
+        <br />
+        <input id="btnSubmit" type="submit" value="Submit" />
+      </div>
+    </section>
+
+    <!-- Cant get the footer to display at the bottom of the page. Works fine on grooming page
+      <footer>
+      <p>
+        &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        - Jeremy Lates Consulting Firm
+      </p>
+    </footer> -->
+  </body>
+</html>

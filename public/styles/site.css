@@ -1,0 +1,98 @@
+/**   
+Title: site.css
+Author: Jeremy Lates
+Date: 11/07/2023
+Description: This is the site css file. You reference this file in your html file
+
+**/
+body {
+  width: 960px;
+  margin: auto;
+
+  font-family: "Oswald", Verdana, Arial, sans-serif;
+}
+.header {
+  text-align: center;
+  color: #fff;
+  background-color: #3c275a;
+}
+.header h1 {
+  margin: 0px;
+}
+.navbar {
+  background-color: #4f3674;
+  border-bottom: 15px solid #d6a800;
+}
+.navbar a {
+  margin-left: 860px;
+}
+
+.navbar a {
+  color: #fff;
+}
+.container {
+  background-color: #fff;
+}
+.columnA {
+  float: left;
+  width: 50%;
+  background-color: #fff;
+  height: 200px;
+}
+.columnB {
+  float: left;
+  width: 50%;
+  background-color: #fff;
+  height: 400px;
+}
+.columnHeader {
+  /* color: #d6a800; */
+  color: #4f3674;
+}
+#imgDogOfWeek {
+  width: 200px;
+  height: 200px;
+}
+.contact-us {
+  color: #4f3674;
+  width: 860px;
+  height: 300px;
+}
+textarea {
+  width: 625px;
+  height: 200px;
+}
+#btnSubmit {
+  background-color: #4f3674;
+  color: white;
+  box-shadow: none;
+  border: 0px;
+  width: 100px;
+}
+.footer {
+  background-color: #4f3674;
+  border-top: 15px solid #d6a800;
+  /* bottom: 0; */
+  /* position: fixed; */
+  width: 960px;
+}
+footer {
+  background-color: #4f3674;
+  border-top: 15px solid #d6a800;
+  width: 960px;
+  text-align: center;
+  color: white;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th {
+  background-color: #d6a800;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
