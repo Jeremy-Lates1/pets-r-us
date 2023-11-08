@@ -6,7 +6,7 @@
 
 
  */
-
+"use strict";
 //  Hook up express
 const express = require("express");
 
