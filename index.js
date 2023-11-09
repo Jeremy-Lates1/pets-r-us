@@ -1,3 +1,4 @@
+"use strict";
 /**
   Title: index.js
   Author: Jeremy Lates
@@ -6,7 +7,7 @@
 
 
  */
-"use strict";
+
 //  Hook up express
 const express = require("express");
 
