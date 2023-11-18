@@ -24,13 +24,9 @@
 
     -->
   <body>
-    <header class="header">
-      <h1>Pets-R-Us</h1>
-    </header>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
 
-    <section class="navbar">
-      <a href="/grooming">Grooming</a>
-    </section>
     <section class="container">
       <h2>Welcome to Pets-R-Us!!</h2>
 
@@ -118,7 +114,7 @@
           placeholder="email address..."
         />
         <br />
-        <!-- <label for="subject">Subject</label> -->
+
         <br />
         <textarea
           id="subject"
@@ -130,15 +126,6 @@
       </div>
     </section>
 
-    <!-- Cant get the footer to display at the bottom of the page. Works fine on grooming page
-      <footer>
-      <p>
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        - Jeremy Lates Consulting Firm
-      </p>
-    </footer> -->
+    <%- include('./partials/_footer.ejs') %>
   </body>
 </html>

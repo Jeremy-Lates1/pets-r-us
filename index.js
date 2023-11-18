@@ -2,8 +2,9 @@
 /**
   Title: index.js
   Author: Jeremy Lates
+  Original Author: Professor Krasso
   Date: 10/07/2023
-  Description:
+  Description:  This code has been adapted from code Professor Krasso provided.
 
 
  */
@@ -38,6 +39,22 @@ app.get("/grooming", (req, res) => {
   res.render("grooming", {
     title: "Hello Routes: grooming",
     message: "Welcome to the grooming page",
+  });
+});
+
+//Route to boarding page
+app.get("/boarding", (req, res) => {
+  res.render("boarding", {
+    title: "Hello Routes: boarding",
+    message: "Welcome to the boarding page",
+  });
+});
+
+//Route to boarding page
+app.get("/training", (req, res) => {
+  res.render("training", {
+    title: "Hello Routes: training",
+    message: "Welcome to the training page",
   });
 });
 

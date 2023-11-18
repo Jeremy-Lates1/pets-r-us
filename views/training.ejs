@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pets-R-Us</title>
+
+    <link href="/styles/site.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--
+        Title: training.ejs
+        Author: Jeremy Lates
+        Date: 11/07/2023
+        Description:
+
+        Programming cites
+
+        1. Code adapted from https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction
+
+      
+
+
+    -->
+  <body>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
+    <section class="container">
+      <div>
+        <p>
+          Dogs will individually go out on excursions and get real world public
+          socializing too, and get plenty of breaks between training sessions to
+          help processing and stress. At the end of the day you will pick up a
+          tired dog, a progress report with skills we worked on, and some
+          homework for you to continue doing too! This program is not just for
+          puppies, although it is great for them too. We will happily
+          accommodate any age dog. Dogs that are selective – or don’t want to
+          play – but coexist just fine are more than welcome. Dogs will get the
+          best training here at Pets-R-Us. They will build social skills along
+          with new commands they can demonstrate to you like "Sit" or even "Roll
+          over". We have three tiers of training listed below with prices.
+        </p>
+      </div>
+
+      <div>
+        <h1>Pricing</h1>
+        <table>
+          <tr>
+            <th>Tier 1</th>
+            <th>Tier 2</th>
+            <th>Tier 3</th>
+          </tr>
+          <tr>
+            <td>Puppy life skills: $65</td>
+            <td>Adolescence 101: $75</td>
+            <td>Adult 101: $75</td>
+          </tr>
+          <tr>
+            <td>Puppy Basics: $50</td>
+            <td>Adolescence Leash Walking: $52</td>
+            <td>Adult Impulse Control: $35</td>
+          </tr>
+          <tr>
+            <td>Puppy focus and self-control: $35</td>
+            <td>Adolescence Manners: $50</td>
+            <td>Adult Manners: $80</td>
+          </tr>
+        </table>
+      </div>
+      <div><h1>Meet the trainer</h1></div>
+      <div class="wrapper">
+        <div class="box1">
+          <img
+            id="imgTrainer"
+            src="/images/Trainer.jpeg"
+            alt="Trainer for the dogs"
+          />
+        </div>
+        <div class="box2">
+          <p>
+            Jeremy is a professional dog trainer serving New Hampshire
+            communities. Jeremy started out as a kennel tech at SuperDogs of New
+            Hampshire, but has spent the last several years building and
+            managing a social dog boarding facility serving the clients of
+            Pets-R-Us in our local area. Jeremy’s love for dogs has been a
+            constant in his life and he can’t wait to get you started on the
+            path to success with your furry family members today.
+          </p>
+        </div>
+      </div>
+    </section>
+    <%- include('./partials/_footer.ejs') %>
+  </body>
+</html>

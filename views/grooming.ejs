@@ -24,14 +24,8 @@
 
     -->
   <body>
-    <header class="header">
-      <h1>Pets-R-Us: Grooming</h1>
-      <p></p>
-    </header>
-
-    <section class="navbar">
-      <a href="/">Home</a>
-    </section>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
     <section class="container">
       <div>
         <p>
@@ -97,14 +91,6 @@
         </table>
       </div>
     </section>
-    <footer>
-      <p>
-        &copy;
-        <script>
-          document.write(new Date().getFullYear());
-        </script>
-        - Jeremy Lates Consulting Firm
-      </p>
-    </footer>
+    <%- include('./partials/_footer.ejs') %>
   </body>
 </html>

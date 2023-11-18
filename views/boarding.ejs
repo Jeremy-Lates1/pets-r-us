@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pets-R-Us</title>
+
+    <link href="/styles/site.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--
+        Title: boarding.ejs
+        Author: Jeremy Lates
+        Date: 11/07/2023
+        Description:
+
+        Programming cites
+
+        1. Code adapted from W3Schools hhttps://www.w3schools.com/html/html_tables.asp
+
+      
+
+
+    -->
+  <body>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
+    <section class="container">
+      <div>
+        <p>
+          At Pets-R-Us your pet is in the best hands all day and all night. You
+          dog will love playing with other dogs in our state of the art
+          facility. It has 5 playrooms that your dog can venture into. Each room
+          has furniture for your dog to play on. While your dog is playing all
+          day it will come time to get some rest. Our sleeping area for yur pet
+          is top notch. We have cushion flooring so your dog is comfortable
+          while staying in the sleeping pen. Our staff love your pets and are
+          trained to give your pet the best experience.
+        </p>
+      </div>
+      <div>
+        <h1>Pricing</h1>
+        <table>
+          <tr>
+            <th>Number of dogs</th>
+            <th>Nights</th>
+            <th>Price</th>
+          </tr>
+          <tr>
+            <td>1 dog</td>
+            <td>Up to 5 Nights</td>
+            <td>$40 per night</td>
+          </tr>
+          <tr>
+            <td>1 dog</td>
+            <td>Over 5 Nights</td>
+            <td>$35 per night</td>
+          </tr>
+          <tr>
+            <td>2 dogs</td>
+            <td>Up to 5 Nights</td>
+            <td>$65 per night</td>
+          </tr>
+          <tr>
+            <td>2 dogs</td>
+            <td>Over 5 Nights</td>
+            <td>$60 per night</td>
+          </tr>
+          <tr>
+            <td>3 dogs</td>
+            <td>Up to 5 Nights</td>
+            <td>$90 per night</td>
+          </tr>
+          <tr>
+            <td>3 dogs</td>
+            <td>Over 5 Nights</td>
+            <td>$75 per night</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <%- include('./partials/_footer.ejs') %>
+  </body>
+</html>
