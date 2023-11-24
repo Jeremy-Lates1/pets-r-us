@@ -5,6 +5,7 @@ Date: 11/07/2023
 Description: This is the site css file. You reference this file in your html file
 
 -- 1. Code adapted from https://www.educative.io/answers/how-to-add-scrollbar-to-div
+-- 2. css adapted from Professor Krasso https://github.com/buwebdev/web-340/blob/master/week-6/fms/public/styles/site.css
 
 **/
 body {
@@ -101,4 +102,25 @@ th {
 .box2 {
   margin-left: 50px;
   margin-top: 0px;
+}
+
+.btn-primary {
+  background-color: #4f3674;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #d6a800;
+  color: #4f3674;
+}
+.btn {
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  padding: 15px 32px;
+  color: #000;
 }
