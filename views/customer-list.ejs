@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pets-R-Us</title>
+
+    <link href="/styles/site.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--
+        Title: customer-list.ejs
+        Author: Jeremy Lates
+        Original Author: Professor Krasso's class code examples are adapted to work with this page
+        Date: 11/28/2023
+        Description:  List of customers
+
+        Programming cites
+
+        1. Code adapted from 
+
+      
+
+
+    -->
+  <body>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
+    <section class="container">
+      <div class="card-content">
+        <% if(customersList.length > 0) { %>
+        <table>
+          <tr>
+            <th>Customer Id</th>
+            <th>Email</th>
+          </tr>
+          <tbody>
+            <% customersList.forEach(function(customer) { %>
+            <tr>
+              <td><%= customer.customerId%></td>
+              <td><%= customer.email%></td>
+            </tr>
+
+            <% } ) %>
+          </tbody>
+        </table>
+        <% } else { %>
+        <h3>No customers to show...</h3>
+        <%}%>
+      </div>
+    </section>
+    <%- include('./partials/_footer.ejs') %>
+    <script>
+      document.getElementById("customerMenuItem").style.color = "#d6a800";
+    </script>
+  </body>
+</html>

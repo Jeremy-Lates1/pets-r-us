@@ -2,14 +2,14 @@
 /**
   Title: index.js
   Author: Jeremy Lates
-  Original Author: Professor Krasso
+  Original Author: Professor Krasso's class code examples are adapted to work with this page
   Date: 10/07/2023
   Description:  This code has been adapted from code Professor Krasso provided.
 
     1. Code has been adapted from Professor Krasso : https://github.com/buwebdev/web-340/blob/master/week-6/fms/index.js
     2. Code had been adapted from Professor Krasso : https://github.com/buwebdev/web-340/blob/master/week-6/mongoose-model/index.js
     3. Code had been adapted from geeksforgeeks.com : https://www.geeksforgeeks.org/express-js-res-render-function/
-    
+    4. Code had been adapated from https://www.geeksforgeeks.org/mongoose-findone-function/
  */
 
 //create express variable
@@ -112,6 +112,24 @@ app.post("/register", (req, res, next) => {
     })
     .catch((err) => {
       console.log("Error : " + err);
+    });
+});
+
+// Route to customers page
+app.get("/customers", (req, res) => {
+  //console.log("Customers Page");
+
+  Customer.find({})
+    .then((docs) => {
+      //console.log(`Customers : ${docs}`);
+      res.render("customer-list", {
+        title: "Customer List",
+        pageTitle: "Pets-R-Us",
+        customersList: docs,
+      });
+    })
+    .catch((err) => {
+      console.log(err);
     });
 });
 
