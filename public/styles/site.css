@@ -124,3 +124,10 @@ th {
   padding: 15px 32px;
   color: #000;
 }
+#service {
+  width: 150px;
+  height: 25px;
+}
+#appointmentForm {
+  margin-left: 350px;
+}

@@ -18,8 +18,13 @@ const express = require("express");
 //create mongoose variable
 const mongoose = require("mongoose");
 
+const fs = require("fs");
+
 //Get customer schema
 const Customer = require("./models/customer");
+
+//Get appointment schema
+const Appointment = require("./models/appointment");
 
 //Will use this for our path
 const path = require("path");
@@ -94,10 +99,30 @@ app.get("/registration", (req, res) => {
   });
 });
 
+/* Create with promise  */
 //Handle post to registration page page
-app.post("/register", (req, res, next) => {
-  console.log("register");
+// app.post("/register", (req, res, next) => {
+//   console.log("register");
 
+//   const newCustomer = new Customer({
+//     customerId: req.body.customerId,
+//     email: req.body.email,
+//   });
+
+//   console.log(newCustomer);
+
+//   Customer.create(newCustomer)
+//     .then((result) => {
+//       console.log(result);
+//       res.render("index");
+//     })
+//     .catch((err) => {
+//       console.log("Error : " + err);
+//     });
+// });
+
+/* Create without promise  */
+app.post("/register", (req, res, next) => {
   const newCustomer = new Customer({
     customerId: req.body.customerId,
     email: req.body.email,
@@ -105,32 +130,83 @@ app.post("/register", (req, res, next) => {
 
   console.log(newCustomer);
 
-  Customer.create(newCustomer)
-    .then((result) => {
-      console.log(result);
+  Customer.create(newCustomer, function (err, customer) {
+    if (err) {
+      console.log(err);
+      next(err);
+    } else {
       res.render("index");
-    })
-    .catch((err) => {
-      console.log("Error : " + err);
-    });
+    }
+  });
 });
 
+/* FInd with promise  */
 // Route to customers page
-app.get("/customers", (req, res) => {
-  //console.log("Customers Page");
+// app.get("/customers", (req, res) => {
+//   //console.log("Customers Page");
 
-  Customer.find({})
-    .then((docs) => {
-      //console.log(`Customers : ${docs}`);
+//   Customer.find({})
+//     .then((docs) => {
+//       //console.log(`Customers : ${docs}`);
+//       res.render("customer-list", {
+//         title: "Customer List",
+//         pageTitle: "Pets-R-Us",
+//         customersList: docs,
+//       });
+//     })
+//     .catch((err) => {
+//       console.log(err);
+//     });
+// });
+
+/* Find without promise  */
+app.get("/customers", (req, res) => {
+  Customer.find({}, function (err, customers) {
+    if (err) {
+      console.log(err);
+      next(err);
+    } else {
       res.render("customer-list", {
         title: "Customer List",
         pageTitle: "Pets-R-Us",
-        customersList: docs,
+        customersList: customers,
       });
-    })
-    .catch((err) => {
+    }
+  });
+});
+
+//Route to registration page
+app.get("/appointment", (req, res) => {
+  let jsonFile = fs.readFileSync("./public/data/services.json");
+  let services = JSON.parse(jsonFile);
+
+  res.render("appointment", {
+    services: services,
+    title: "Hello Appointment: appointment",
+    message: "Welcome to the Appointment page",
+  });
+});
+
+//Book an appointment
+app.post("/appointment", (req, res, next) => {
+  const newAppointment = new Appointment({
+    userName: req.body.userName,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    service: req.body.service,
+  });
+
+  console.log(`newAppointment : ${newAppointment}`);
+
+  Appointment.create(newAppointment, function (err, appointment) {
+    if (err) {
       console.log(err);
-    });
+      next(err);
+    } else {
+      res.render("index");
+    }
+  });
 });
 
 app.listen(PORT, () => {

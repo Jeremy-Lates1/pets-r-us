@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pets-R-Us</title>
+
+    <link href="/styles/site.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <!--
+        Title: appointment.ejs
+        Author: Jeremy Lates
+        Original Author: Professor Krasso's class code examples are adapted to work with this page
+        Date: 11/21/2023
+        Description:  User register for pets-r-us communications
+
+        Programming cites
+
+        1. Code adapted from https://www.w3schools.com/html/html_form_input_types.asp
+        2. Code adapted from https://www.w3schools.com/tags/tag_select.asp
+        3. Code adapted from https://github.com/buwebdev/web-340/blob/master/week-8/fms/views/order.ejs
+        4. Code adapted from https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_required
+
+
+      
+
+
+    -->
+  <body>
+    <%- include('./partials/_header.ejs') %> <%-
+    include('./partials/_navigation.ejs') %>
+    <section class="container">
+      <div>
+        <br />
+        <form id="appointmentForm" action="/appointment" method="post">
+          <label for="service">Service:</label>
+          <br />
+          <select name="service" id="service">
+            <% services.forEach((service) => { %>
+
+            <option value="<%= service.value %>"><%= service.text %></option>
+
+            <% }); %>
+          </select>
+          <br />
+          <label for="userName">User Name:</label>
+          <br />
+          <input type="text" id="userName" name="userName" required />
+          <br />
+          <label for="firstName">First Name:</label>
+          <br />
+          <input type="text" id="firstName" name="firstName" required />
+          <br />
+          <label for="firstName">Last Name:</label>
+          <br />
+          <input type="text" id="lastName" name="lastName" required />
+          <br />
+          <label for="email">Email:</label>
+          <br />
+          <input type="email" id="email" name="email" required />
+          <br />
+          <input
+            type="submit"
+            value="Create Appointment"
+            class="btn btn-primary"
+          />
+        </form>
+      </div>
+    </section>
+    <%- include('./partials/_footer.ejs') %>
+    <script>
+      document.getElementById("appointmentMenuItem").style.color = "#d6a800";
+    </script>
+  </body>
+</html>
