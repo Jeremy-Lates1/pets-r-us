@@ -209,6 +209,27 @@ app.post("/appointment", (req, res, next) => {
   });
 });
 
+//Route to my appointments page
+app.get("/my-appointments", (req, res) => {
+  res.render("my-appointments");
+});
+
+//Fetch appointments by email address
+app.get("/api/appointments/:email", async (req, res, next) => {
+  console.log("Made it to API");
+  console.log(req.params.email);
+  Appointment.find({ email: req.params.email }, function (err, appointments) {
+    if (err) {
+      console.log(err);
+      next(err);
+    } else {
+      console.log(appointments);
+      console.log(`my data : ${appointments}`);
+      res.json(appointments);
+    }
+  });
+});
+
 app.listen(PORT, () => {
   console.log("Application started and listening on PORT " + PORT);
 });
