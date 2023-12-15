@@ -15,10 +15,10 @@
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^4.18.2",
-    "mongoose": "6.12.3",
-    "engines": {
-      "node": "16.20.2",
-      "npm": "8.19.4"
-    }
+    "mongoose": "6.12.3"
+  },
+  "engines": {
+    "node": "16.20.2",
+    "npm": "8.19.4"
   }
 }
